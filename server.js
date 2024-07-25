@@ -18,7 +18,9 @@ app.use(cors());
 // });
 
 //#2
-readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
+readdirSync("./routes").map((route) =>
+  app.use("/api", require("./routes/" + route))
+);
 
 const port = process.env.PORT;
 app.listen(port, () => {
