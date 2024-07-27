@@ -13,9 +13,9 @@ app.use(morgan("dev"));
 app.use(bodyParser.json({ limit: "20mb" }));
 app.use(cors());
 
-// app.get("/", (req, res) => {
-//   res.send("Hello World!");
-// });
+app.get("/api/test", (req, res) => {
+  res.send("Hello World!  im worapong");
+});
 
 //#2
 readdirSync("./routes").map((route) =>
